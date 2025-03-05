@@ -35,5 +35,13 @@ namespace AgendaContacts
                 Console.WriteLine("Phone not founded");
             }
         }
+
+        public void editContact(Contact contact)
+        {
+            if (contactsBook.ContainsKey(contact.PhoneNumber))
+            {
+                contactsBook
+            }
+        }
     }
 }
