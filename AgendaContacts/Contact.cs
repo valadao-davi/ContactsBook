@@ -54,5 +54,13 @@ namespace AgendaContacts
                 }
             }
         }
+
+        
+        public override string ToString()
+        {
+            return "Contact's name: " + Name +
+                "\nPhone number: " + PhoneNumber +
+                "\nEmail: " + Email;
+        }
     }
 }
