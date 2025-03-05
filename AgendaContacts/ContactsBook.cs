@@ -55,6 +55,7 @@ namespace AgendaContacts
             if (contactsBook.ContainsKey(phoneNumber))
             {
                 contactsBook.Remove(phoneNumber);
+                Console.WriteLine("Contact deleted with sucess.");
             }
             else
             {
