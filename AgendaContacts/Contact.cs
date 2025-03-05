@@ -37,6 +37,7 @@ namespace AgendaContacts
             set {
                 if (Regex.IsMatch(value, @"^[0-9]+$"))
                 {
+                    Console.WriteLine("Valid value.");
                     _phoneNumber = value;
                 }
             }
