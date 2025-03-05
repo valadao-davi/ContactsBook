@@ -24,6 +24,16 @@ namespace AgendaContacts
             }
         }
 
-
+        public void searchContactsByPhone(string phoneNumber)
+        {
+            if (contactsBook.ContainsKey(phoneNumber))
+            {
+                Console.WriteLine(contactsBook[phoneNumber]);
+            }
+            else
+            {
+                Console.WriteLine("Phone not founded");
+            }
+        }
     }
 }
