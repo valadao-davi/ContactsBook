@@ -24,7 +24,7 @@ namespace AgendaContacts
             }
         }
 
-        public void searchContactsByPhone(string phoneNumber)
+        public void SearchContactsByPhone(string phoneNumber)
         {
             if (contactsBook.ContainsKey(phoneNumber))
             {
@@ -36,11 +36,29 @@ namespace AgendaContacts
             }
         }
 
-        public void editContact(Contact contact)
+        public void EditContact(Contact newContact, string searchPhone)
         {
-            if (contactsBook.ContainsKey(contact.PhoneNumber))
+            if (contactsBook.ContainsKey(searchPhone))
             {
-                contactsBook
+                contactsBook.Remove(searchPhone);
+                contactsBook[newContact.PhoneNumber] = newContact;
+                Console.WriteLine(contactsBook[newContact.PhoneNumber]);
+            }
+            else
+            {
+                Console.WriteLine("Contact not founded");
+            }
+        }
+
+        public void DeleteContact(string phoneNumber)
+        {
+            if (contactsBook.ContainsKey(phoneNumber))
+            {
+                contactsBook.Remove(phoneNumber);
+            }
+            else
+            {
+                Console.WriteLine("Phone not founded");
             }
         }
     }
